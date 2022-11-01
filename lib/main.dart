@@ -1,8 +1,14 @@
-import 'package:classmoor_app/cubit/counter_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'business_logic/cubits/counter_cubit.dart';
+
 void main() {
+  const CounterState counterState1 =
+      CounterState(counterValue: 1, wasIncremented: true);
+  const CounterState counterState2 =
+      CounterState(counterValue: 1, wasIncremented: true);
+  print(counterState1 == counterState2);
   runApp(const MyApp());
 }
 
